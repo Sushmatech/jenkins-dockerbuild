@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: web
-          image: 987075663466.dkr.ecr.us-east-1.amazonaws.com/check:latest # Image that will be used to containers in the cluster
+          image: 654654349563.dkr.ecr.us-east-2.amazonaws.com/sush:latest # Image that will be used to containers in the cluster
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80 # The port that the container is running on in the cluster
@@ -33,4 +33,4 @@ spec:
     - protocol: "TCP"
       port: 80 # The port that the service is running on in the cluster
       targetPort: 80 # The port exposed by the service
-  type: NodePort # type of the service.
+  type: loadbalancer # type of the service.
